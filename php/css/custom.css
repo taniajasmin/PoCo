@@ -1,0 +1,19 @@
+body {
+    background-color: #ffd1d1;
+}
+
+.cust-panel-header {
+    background-color: #ee959e !important;
+    border-color: #ee959e !important;
+    color: white;
+    text-align: center;
+}
+
+.cust_panel {
+    border-color: #ee959e !important;
+}
+
+.btn-poco {
+    color: white;
+    background-color: #ee959e !important;
+}
