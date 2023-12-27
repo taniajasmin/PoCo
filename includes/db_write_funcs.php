@@ -84,7 +84,7 @@ function del_self()
 
 function del_user($u, $comment = null)
 {
-    if (!($u = get_user($uname)))		apologize("Invalid username.");
+    if (!($u = get_user($u)))		apologize("Invalid username.");
     if (!am_admin() || is_admin($u))	apologize("Access Denied.");
     if (is_deleted($u))					apologize("User does not exist.");
 
@@ -441,7 +441,7 @@ function unsticky_post($pid, $s, $comment = null)
     if (!($p = get_post($pid)))			apologize("Post does not exist.");
     if ($p["status"] == 'NORMAL')		apologize("Post not currently stickied.");
     if ($p["status"] == 'DELETED')		apologize("Post does not exist.");
-    if (!am_mod(get_society($sname)))	apologize("Access Denied.");
+    if (!am_mod(get_society($s)))	apologize("Access Denied.");
 
     return tquery("
                     update posts

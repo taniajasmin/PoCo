@@ -86,18 +86,19 @@
 	<?php
 		if ($self) 
 		{
-			echo "<li class=\"".($t=="inbox" ? "active":"")."\" >".
-					"<a href=\"".$pg."inbox"."\" >".
-						"<span class=\"glyphicon glyphicon-envelope\"></span>".
-						" Inbox".
-					"</a>".
-				"</li>".
-				"<li class=\"".($t=="outbox" ? "active":"")."\" >".
-					"<a href=\"".$pg."outbox"."\" >".
-						"<span class=\"glyphicon glyphicon-envelope\"></span>".
-						" Outbox".
-					"</a>".
-				"</li>".
+			$confidential = "<li class=\"".($t=="inbox" ? "active":"")."\" >".
+				"<a href=\"".$pg."inbox"."\" >".
+					"<span class=\"glyphicon glyphicon-envelope\"></span>".
+					" Inbox".
+				"</a>".
+			"</li>".
+			"<li class=\"".($t=="outbox" ? "active":"")."\" >".
+				"<a href=\"".$pg."outbox"."\" >".
+					"<span class=\"glyphicon glyphicon-envelope\"></span>".
+					" Outbox".
+				"</a>".
+			"</li>";
+			echo $confidential .
 				"<li class=\"".($t=="chist" ? "active":"")."\" >".
 					"<a href=\"".$pg."chist"."\" >".
 						"<span class=\"glyphicon glyphicon-comment\"></span>".

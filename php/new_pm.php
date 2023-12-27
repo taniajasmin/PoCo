@@ -8,8 +8,12 @@
 	if (empty($_POST['subject']))
 		$_POST['subject'] = null;
 
+	// get user
+	$to_user = get_user($_POST["to"]);
+
 	// make PM
-	if (make_pm(get_user($_POST["to"]), $_POST['text']) === false, $_POST['subject']) {
+	$made_pm = make_pm($to_user, $_POST['text'], $_POST['subject']);
+	if ($made_pm === false) {
 		apologize("Failed to submit post.");
 	}
 
